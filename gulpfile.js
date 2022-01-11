@@ -1,4 +1,5 @@
 var gulp         = require('gulp'),
+		ghPages      = require('gulp-gh-pages'),
 		sass         = require('gulp-sass')(require('sass')),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
@@ -79,24 +80,14 @@ gulp.task('buildPages', function() { return gulp.src(['app/pages/*.html']).pipe(
 gulp.task('buildCss', function() { return gulp.src(['app/assets/css/main.min.css']).pipe(gulp.dest('dist/assets/css')) });
 gulp.task('buildJs', function() { return gulp.src(['app/assets/js/app.min.js']).pipe(gulp.dest('dist/assets/js')) });
 gulp.task('buildFonts', function() { return gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts')) });
+gulp.task('buildFavicon', function() { return gulp.src(['app/assets/img/favicon/*']).pipe(gulp.dest('dist/assets/img/favicon')) });
 
-gulp.task('build', gulp.series('removedist', 'imagemin', 'sass', 'js', 'buildFiles', 'buildVideo', 'buildPages', 'buildCss', 'buildJs', 'buildFonts'));
+gulp.task('build', gulp.series('removedist', 'imagemin', 'sass', 'js', 'buildFiles', 'buildVideo', 'buildPages', 'buildCss', 'buildJs', 'buildFonts', 'buildFavicon'));
 
 gulp.task('deploy', function() {
 
-	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
-		parallel:  10
-	});
-
-	var globs = [
-	'dist/**',
-	'dist/.htaccess',
-	];
-	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	return gulp.src('./dist/**/*')
+	.pipe(ghPages());
 
 });
 
