@@ -1,0 +1,49 @@
+.category
+	padding: 65px 0 97px
+	
+	&-container
+		@include flexbox(flex, space-between, stretch, wrap)
+		gap: 30px
+		
+	&-item
+		background: 
+			repeat: no-repeat
+			size: cover
+			color: rgb(33, 22, 22)
+		width: 31.5%
+		min-height: 260px
+		@include flexbox(flex, center, center, wrap)
+
+		&:hover 
+			.category-title
+				color: $white
+			
+			.category-subtitle
+				color: $accent
+		
+		&-women
+			background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/women.jpg)
+		
+		&-men
+			background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/men.jpg)
+		
+		&-kids
+			background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kids.jpg)
+		
+		&-accesories
+			background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/accesories.jpg)
+			width: 100%
+			min-height: 180px
+
+	&-subtitle
+		display: block
+		text-align: center
+		transition: color 0.25s
+		@include txt(400, 16px, $white)
+
+	&-title
+		@include txt(700, 24px, $accent)
+		text-align: center
+		transition: color .25s
+		margin: 0
+	

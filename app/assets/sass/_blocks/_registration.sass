@@ -1,0 +1,129 @@
+.registration
+	&-container
+		@include flexbox()
+		padding: 60px 0 96px
+	
+	&-form
+		width: 31.5%
+	
+	&-name, &-login
+		border: 0
+		padding: 0
+		margin: 0
+
+		&-title
+			@include txt(300, 16px, $color_mine_shaft_approx)
+			margin-bottom: 17px
+			padding: 0
+		
+	&-first-name, &-second-name, &-email, &-password
+		width: 100%
+		margin-bottom: 20px
+		padding: 9px 16px 12px 16px
+		@include txt(300, 13px, $color_mine_shaft_approx)
+		border: 1px solid #A4A4A4
+
+		&:focus
+			outline: 0
+			border: 1px solid $color_mine_shaft_approx
+		
+		&::placeholder
+			color: #B1B1B1
+	
+	&-gender
+		margin: 6px 0 26px
+
+		&-input
+			display: none
+
+			&:checked + .registration-gender-label::before
+				border: 2px solid $accent
+				background-color: #fff
+				background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='1.8' fill='%23F16D7F'/%3e%3c/svg%3e")
+
+		&-label
+			margin-right: 13px
+			display: inline-block
+			cursor: pointer
+			position: relative
+			padding-left: 28px
+			line-height: 17px
+			user-select: none
+			@include txt(300, 13px, $black)
+
+			&::before
+				content: ""
+				display: inline-block
+				width: 17px
+				height: 17px
+				border: 1px solid #A4A4A4
+				border-radius: 50%
+				position: absolute
+				left: 0
+				bottom: 0
+	
+	&-password
+		&-brief
+			@include txt(300, 13px, #B1B1B1)
+			margin: -5px 0 40px
+			line-height: 16px
+	
+	&-button
+		padding: 14px 28px 16px 27px
+		background-color: $accent
+		border: 1px solid $accent
+		font-size: 14px
+		color: $white
+		@include flexbox(flex, space-between, center)
+		line-height: 17px
+		transition-property: border, background-color, color
+		transition-duration: 0.25s
+
+		&-icon
+			margin-left: 22px
+			fill: $white
+			transition: fill .25s 
+		
+		&:hover
+			border: 1px solid $accent
+			background-color: transparent
+			color: $accent
+
+			.registration-button-icon
+				fill: $accent
+
+	&-loyalty
+		@include txt(300, 24px, $black)
+		width: 57.2%
+		margin-top: 5px
+
+		&-title
+			font-weight: 300
+			font-size: 24px
+		
+		&-txt
+			line-height: 29px
+			margin: 22px 0 21px
+		
+		&-list
+			margin: 0
+			line-height: 29px
+
+		&-item
+			padding-left: 43px
+			position: relative
+			margin-bottom: 15px
+
+			&::before
+				content: ''
+				background: 
+					image: url(../img/check.svg)
+				display: block
+				position: absolute
+				width: 20px
+				min-height: 16px
+				left: 0px
+				top: 7px
+
+			
+		

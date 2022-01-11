@@ -1,0 +1,178 @@
+.main-header
+	background-color: $color_mine_shaft_approx
+	padding: 18px 0
+
+	&-container
+		@include flexbox()
+		padding-right: 9px
+		
+	&-group
+		@include flexbox(flex, flex-start, flex-end)
+	
+	&-logo
+		transition: transform .25s
+		&:hover
+			transform: rotate(27deg)
+		&:active
+			transform: rotate(27deg) scale(.96)
+
+	&-search
+		position: relative
+		margin: 0 0 0 40px
+
+		&-summary
+			cursor: pointer
+			fill: $white
+			transition: fill 0.25s
+			display: block
+
+			&:hover
+				fill: $accent
+		
+		&-field
+			position: absolute
+			top: -10px
+			left: 70px
+			width: 300px
+			min-height: 24px
+			opacity: 1
+			transition-property: opacity, width, border-bottom
+			transition-duration: 0.25s
+			font-size: 16px
+			color: $white
+			background-color: transparent
+			outline: none
+			border: 0
+			border-bottom: 1px solid $accent
+			padding: 8px 0 2px
+			box-sizing: border-box	
+
+			&::placeholder
+				color: $white
+				font-weight: 300
+
+		&-btn
+			position: absolute
+			top: 3px
+			left: 348px
+			width: 20px
+			background:
+				color: transparent
+				image: url(../img/search.svg)
+				size: contain
+				repeat: no-repeat
+			border: none
+			outline: none
+
+			&-icon
+				&:active
+					transform: scale(.96)
+
+	&-menu
+		margin: 0px 25px 3px 0
+
+		&[open] .main-header-menu-cross
+			display: block
+
+		&-summary
+			margin: 0
+			cursor: pointer
+			display: block
+
+			&-icon
+				fill:$color_mercury_approx
+				transition: fill 0.25s
+
+				&:hover
+					fill: $accent
+				
+				&:active
+					transform: scale(.96)
+		
+		&-account, &-basket
+			display: none
+		
+		&-category
+			margin: 0 auto
+			height: 0
+			min-height: 650px
+			height: calc(100% - 74px)
+			position: absolute
+			top: 74px
+			right: 0
+			padding: 36px 5px 36px 34px
+			width: 232px
+			z-index: 9999
+			background-color: $white
+			box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+		
+		&-title
+			font-weight: bold
+			font-size: 14px
+			margin-bottom: 24px
+		
+		&-cross
+			fill: $color_dove_gray_approx
+			transition: fill 0.25s
+			display: none
+			position: absolute
+			right: 17px
+			top: 91px
+			z-index: 10000
+
+			&:hover
+				fill: $black
+		
+		&-list
+			margin: 0
+
+		&-link
+			color: $accent
+			font-size: 14px
+
+			&:hover
+				font-weight: 700
+				color: $accent
+			
+		&-item 
+			& > .main-header-menu-list 
+				padding-left: 21.5px
+				margin-top: 10px
+				margin-bottom: 15px
+				
+				.main-header-menu-link
+					color: $color_dove_gray_approx			
+
+	&-account
+		margin-right: 42px
+	
+	&-account, &-basket
+		background-color: transparent
+		outline: none
+		border: none
+		
+		&-icon
+			fill:$color_mercury_approx
+			transition: fill 0.25s
+
+			&:hover
+				fill: $accent	
+			
+			&:active
+				transform: scale(.96)
+
+	&-basket
+		position: relative
+
+		&:after
+			position: absolute
+			top: -8px
+			right: -9px
+			content: '5'
+			width: 19px
+			min-height: 19px
+			border-radius: 50%
+			@include flexbox(flex, center, center)
+			font-size: 12px
+			color:  $white
+			background-color: $accent

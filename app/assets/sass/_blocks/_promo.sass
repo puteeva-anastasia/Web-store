@@ -1,0 +1,41 @@
+
+	
+.promo
+	background-color: #F1E4E6
+	
+	&-container
+		@include flexbox(flex, flex-end, center)
+		min-height: 764px
+		background: 
+			image: url(../img/promo.png)
+			repeat: no-repeat
+			position-x: -68%
+			size: contain
+
+	&-name
+		border-left: 12px solid $accent
+		padding-left: 16px
+		color: $color_mine_shaft_approx
+		width: 44.4%
+		line-height: 58px
+		animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+		margin-bottom: 79px
+		max-height: 93px
+		padding-top: 5px
+
+	&-title
+		position: relative
+		display: block
+		width: 100%
+		margin-bottom: -4px
+		font-size: 48px
+		font-weight: 900
+		line-height: 0.8
+	
+	&-subtitle
+		font-size: 32px
+		font-weight: 700
+	
+		em
+			color: $accent
+			font-style: normal	
