@@ -61,14 +61,20 @@ ul
 a
 	text-decoration: none
 
+a, details, select
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+details summary::-webkit-details-marker
+	display: none
+
 body
 	font-size: 16px
-	min-width: 375px
+	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	margin: 0
-
+	
 .container
 	width: 1140px
 	margin: 0 auto

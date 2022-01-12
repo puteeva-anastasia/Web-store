@@ -244,7 +244,7 @@
 
 @media only screen and (max-width: 765px)
 	.container
-		width: 320px
+		max-width: 343px
 	
 	.main-header
 		&-container
@@ -329,10 +329,10 @@
 			min-height: 363px
 		
 		&-name
-			animation: none
-			width: 82%
+			width: 77%
 			padding-top: 5px
 			max-height: 61px
+			animation: none
 		
 		&-title
 			font-size: 38px
@@ -629,3 +629,65 @@
 
 			&-link
 				margin: 0
+
+	@media only screen and (max-width: 375px)
+		.container
+			width: 310px
+		
+		.main-header
+			padding-bottom: 40px
+
+			&-container
+				width: 300px
+			
+			&-search
+				&-field
+					left: 0
+					top: 25px
+				
+				&-btn
+					left: 155px
+					top: 39px
+			
+			&-menu
+				&-category
+					top: 96px
+				
+				&-cross
+					top: 113px
+						
+		.promo
+			&-name
+				width: 85%
+		
+		.fetured-items
+			&-data-setting
+				width: 260px
+
+			&-filter
+				&-icon
+					margin-left: -28px
+
+				&-wrap
+					left: -30px
+					width: 320px			
+
+			&-card
+				width: 315px
+			
+			&-txt
+				width: 80%
+		
+		.product
+			&-choose
+				&-color, &-size
+					margin-right: 10px
+		
+		.checkout
+			&-button
+				&-clear, &-continue
+					padding: 6px 26px 4px 25px
+		
+		.subscription
+			&-email
+				width: 200px
