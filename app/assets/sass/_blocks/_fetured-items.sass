@@ -23,6 +23,8 @@
 		text-transform: uppercase
 		
 	&-filter
+		width: 30%
+
 		&[open] 
 			.fetured-items-filter-title
 				color: $accent
@@ -36,7 +38,6 @@
 			align-items: center
 			position: absolute
 			z-index: 100000
-			width: 30%
 
 			&:hover 
 				.fetured-items-filter-icon
@@ -135,7 +136,7 @@
 			margin-left: 50px
 			display: flex
 			align-items: center
-			
+			justify-content: space-between
 
 			&:active
 				transform: scale(.96)
@@ -234,7 +235,7 @@
 				transform: scaleX(1)
 			
 			.fetured-items-card-btn
-				@include flexbox(flex, center, center)
+				@include flexbox(flex, space-between, center)
 
 		&-wrap
 			position: relative
@@ -265,7 +266,7 @@
 			object-position: 0 25%
 		
 		&-btn
-			padding: 0 13px
+			width: 138px
 			height: 43px
 			display: none
 			font-size: 14px
@@ -281,6 +282,7 @@
 			margin: auto
 			transition-property: background-color, color
 			transition-duration: 0.25s
+			padding: 0 13px
 
 			&:hover
 				background-color: $white
@@ -294,7 +296,6 @@
 				transition: fill .25s
 
 			&-txt
-				margin-left: 11px
 				display: block
 
 		&-description
