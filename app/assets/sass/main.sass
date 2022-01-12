@@ -50,6 +50,10 @@ button, input, select, textarea
 	&:active
 		transform: scale(.96)
 
+button
+	&:active, &:focus
+		outline: none
+
 option
 	padding: 0
 
@@ -61,7 +65,7 @@ ul
 a
 	text-decoration: none
 
-a, details, select
+a, details, select, [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled)
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
 details summary::-webkit-details-marker

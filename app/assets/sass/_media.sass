@@ -41,14 +41,13 @@
 	
 	.category
 		padding: 20px 0 157px 0
-		&-container
-			gap: 20px
 		
 		&-item
 			min-height: 167px
 
 			&-accesories
 				min-height: 116px
+				margin-top: 20px
 	
 	.fetured-items
 		padding-bottom: 65px
@@ -70,12 +69,10 @@
 
 		&-title
 			margin-bottom: 0
-
-		&-cards
-			gap: 16px	
 		
 		&-card
 			width: 48.9%
+			margin-bottom: 16px
 
 			&-catalog
 				&:last-of-type
@@ -204,10 +201,13 @@
 		&-container
 			flex-direction: column
 			align-items: center
-			gap: 87px
 			width: 100%
 		&-item
 			width: 43%
+			margin-bottom: 87px
+
+			&:last-of-type
+				margin-bottom: 0
 	
 	.subscription
 		padding: 64px 0 142px 0
@@ -215,11 +215,11 @@
 
 		&-container
 			flex-direction: column
-			gap: 79px
 			align-items: center
 		
 		&-illustration
 			width: 55%
+			margin-bottom: 79px
 		
 		&-wrap
 			padding: 0
@@ -346,15 +346,16 @@
 
 		&-container
 			justify-content: center
-			gap: 33px
 
 		&-item
 			width: 343px
 			min-height: 247px
+			margin-bottom: 33px
 
 			&-accesories
 				width: 343px
 				min-height: 111px
+				margin: 0
 	
 	.fetured-items
 		padding-bottom: 95px
@@ -576,26 +577,27 @@
 	.benefits
 		padding: 102px 0 62px
 
-		&-container
-			gap: 82px
-
 		&-item
 			width: 103%
+			margin-bottom: 82px
 
 			&-title
 				margin: 4px 0 5px
+			
+			&:last-of-type
+				margin-bottom: 0
 
 	.subscription
 		padding: 63px 0 109px
 		background-position: 24.4% 2px
 
 		&-container
-			gap: 70px
 			flex-direction: row
 			justify-content: center
 
 		&-illustration
 			width: 100%
+			margin-bottom: 70px
 
 			&-photo
 				width: 92px
@@ -620,15 +622,16 @@
 
 		&-container
 			flex-direction: column-reverse
-			gap: 36px
 			padding: 0 8px 0 10px
 
 		&-social
-			margin-bottom: -15px
-			gap: 7px
+			margin-bottom: 36px
 
 			&-link
-				margin: 0
+				margin: 0 7px 0 0
+
+				&:last-of-type
+					margin-right: 0
 
 	@media only screen and (max-width: 375px)
 		.container
