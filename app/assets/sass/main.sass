@@ -53,9 +53,6 @@ button, input, select, textarea
 :focus
 	outline: none
 
-option
-	padding: 0
-
 ul
 	list-style-type: none
 	padding: 0
@@ -68,6 +65,12 @@ a, details, select, [type=button]:not(:disabled), [type=reset]:not(:disabled), [
 
 details summary::-webkit-details-marker
 	display: none
+
+select, option
+	appearance: none
+
+select
+	padding-left: 8px
 
 body
 	font-size: 16px
@@ -88,6 +91,19 @@ body
 	left: -99999px
 	margin: -1px
 
+.select-wrapper
+	position: relative
+	display: inline-block
+
+	&::after
+		content: '\f078'
+		font-family: "Font Awesome 5 Free"
+		font-size: 10px
+		font-weight: 900
+		position: absolute
+		top: 14px
+		right: 15px
+		color: #6f6e6e
 
 @import "_blocks/main-header"
 

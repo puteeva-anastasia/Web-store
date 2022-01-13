@@ -131,7 +131,6 @@
 		
 		&-color, &-size
 			background-color: transparent
-			
 
 		&-color
 			width: 136px
@@ -148,13 +147,15 @@
 
 			&-summary
 				cursor: pointer
+				display: inline-block
 				display: flex
 				align-items: center
+				padding-left: 8px
 
 			&-open
 				display: flex
 				position: absolute
-				left: -8%
+				left: 0
 				
 			&-button
 				width: 30px
@@ -185,11 +186,12 @@
 
 		&-title
 			margin-right: 9px
-			display: block
+			display: inline-block
 			font-size: 14px
 		
 		.fa-chevron-down
 			font-size: 11px
+			margin-top: 4px
 
 	&-button
 		display: flex
