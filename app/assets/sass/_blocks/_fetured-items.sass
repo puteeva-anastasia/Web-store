@@ -17,8 +17,9 @@
 		transition: color 0.25s
 
 	&-filter-title, &-sort-title
-		display: block
+		display: inline-block
 		margin-top: 3px
+		margin-right: 8px
 		text-transform: uppercase
 		
 	&-filter
@@ -134,21 +135,10 @@
 			font-weight: 400
 			padding: 0
 			margin-left: 50px
-			display: flex
-			align-items: center
-			justify-content: space-between
+			display: inline-block
 
 			&:active
 				transform: scale(.96)
-			
-			&-filter
-				width: 134px
-			
-			&-size
-				width: 52px
-			
-			&-price
-				width: 63px
 			
 			&:hover
 				color: $accent
