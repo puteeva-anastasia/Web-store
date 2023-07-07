@@ -24,7 +24,6 @@ gulp.task('browser-sync', function() {
 		// tunnel: true, tunnel: 'projectname', // Demonstration page: http://projectname.localtunnel.me
 	})
 });
-function bsReload(done) { browserSync.reload(); done() };
 
 gulp.task('sass', function() {
 	return gulp.src('app/assets/sass/**/*.sass')
@@ -78,7 +77,7 @@ gulp.task('buildFiles', function() { return gulp.src(['app/*.html', 'app/.htacce
 gulp.task('buildVideo', function() { return gulp.src(['app/assets/video/**/*']).pipe(gulp.dest('dist/assets/video')) });
 gulp.task('buildPages', function() { return gulp.src(['app/pages/*.html']).pipe(gulp.dest('dist/pages')) });
 gulp.task('buildCss', function() { return gulp.src(['app/assets/css/main.min.css']).pipe(gulp.dest('dist/assets/css')) });
-gulp.task('buildJs', function() { return gulp.src(['app/assets/js/app.min.js']).pipe(gulp.dest('dist/assets/js')) });
+gulp.task('buildJs', function() { return gulp.src(['app/assets/js/*', '!app/assets/js/app.js']).pipe(gulp.dest('dist/assets/js')) });
 gulp.task('buildFonts', function() { return gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts')) });
 gulp.task('buildFavicon', function() { return gulp.src(['app/assets/img/favicon/*']).pipe(gulp.dest('dist/assets/img/favicon')) });
 
