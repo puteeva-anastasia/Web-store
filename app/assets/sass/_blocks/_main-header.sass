@@ -92,7 +92,7 @@
 		
 		&-account, &-basket
 			display: none
-		
+			
 		&-category
 			margin: 0 auto
 			height: 0
@@ -165,15 +165,49 @@
 	&-basket
 		position: relative
 
-		&:after
+		&-quantity
 			position: absolute
 			top: -8px
 			right: -9px
-			content: '5'
 			width: 19px
 			height: 19px
 			border-radius: 50%
 			@include flexbox(flex, center, center)
 			font-size: 12px
-			color:  $white
+			color: $white
 			background-color: $accent
+	
+	&__in-basket
+		position: absolute
+		z-index: 1
+		right: 0
+		top: 40px
+		width: 500px
+		border: 1px solid rgba(0,0,0,.2)
+		border-radius: 0.3rem
+		background-color: #fff
+		margin-left: 15px
+
+		@media only screen and (max-width: 765px)
+			display: none
+		
+		.empty
+			text-align: center
+			display: block
+			margin: 10px 25px
+
+		table
+			border-collapse: collapse
+			width: 100%
+			max-width: 100%
+
+			th
+				border-bottom: 2px solid #dee2e6
+				text-align: left
+				vertical-align: top
+			
+			th, td
+				padding: 0.3rem
+				border-top: 1px solid #dee2e6
+				width: 25%
+		

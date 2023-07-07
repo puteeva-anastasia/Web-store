@@ -1,4 +1,4 @@
-.fetured-items
+.featured-items
 	padding-bottom: 95.5px
 
 	&-data-setting
@@ -26,10 +26,10 @@
 		width: 30%
 
 		&[open] 
-			.fetured-items-filter-title
+			.featured-items-filter-title
 				color: $accent
 			
-			.fetured-items-filter-icon
+			.featured-items-filter-icon
 				fill: $accent
 
 		&-summary
@@ -40,17 +40,17 @@
 			z-index: 100000
 
 			&:hover 
-				.fetured-items-filter-icon
+				.featured-items-filter-icon
 					fill: $accent
 				
-				.fetured-items-filter-title
+				.featured-items-filter-title
 					color: $accent
 
 			&:active
-				.fetured-items-filter-icon
+				.featured-items-filter-icon
 					transform: scale(.7)
 				
-				.fetured-items-filter-title
+				.featured-items-filter-title
 					transform: scale(.96)
 		
 		&-title
@@ -75,10 +75,10 @@
 		&-input
 			display: none
 
-			&:checked + .fetured-items-filter-label
+			&:checked + .featured-items-filter-label
 				color: $color_mandy_approx
 
-				& + .fetured-items-filter-list
+				& + .featured-items-filter-list
 					height: auto
 					margin: 21px 0 5px 0
 					padding: 0 17px 0 17px
@@ -108,7 +108,7 @@
 			margin: 0
 		
 		&-item
-			&:hover .fetured-items-filter-link
+			&:hover .featured-items-filter-link
 				color: $accent
 		
 		&-link
@@ -123,7 +123,7 @@
 		position: relative
 
 		&[open]
-			.fetured-items-sort-summary
+			.featured-items-sort-summary
 				color: $accent
 
 			.fa-chevron-down
@@ -181,7 +181,7 @@
 			left: 38%
 
 			&-input
-				&:checked + .fetured-items-sort-size-label::before
+				&:checked + .featured-items-sort-size-label::before
 					background-color: $accent
 					background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill='%23fff' d='M7.773 14.023a1 1 0 01-.707-.293l-4.5-4.5A1 1 0 013.98 7.816l3.793 3.793 6.793-6.793A1 1 0 1115.98 6.23l-7.5 7.5a1 1 0 01-.707.293z'/%3E%3C/svg%3E")
 
@@ -189,7 +189,7 @@
 			left: 23%
 
 			&-input
-				&:checked + .fetured-items-sort-filter-label::before
+				&:checked + .featured-items-sort-filter-label::before
 					background-color: $accent
 					background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FFFFFF'/%3e%3c/svg%3e")
 
@@ -232,11 +232,11 @@
 		margin-bottom: 30px
 
 		&:hover 
-			.fetured-items-card-wrap:after
+			.featured-items-card-wrap:after
 				background-color: rgba(58, 56, 56, 0.86)
 				transform: scaleX(1)
 			
-			.fetured-items-card-btn
+			.featured-items-card-btn
 				@include flexbox(flex, space-between, center)
 
 		&-wrap
@@ -290,7 +290,7 @@
 				background-color: $white
 				color: rgba(58, 56, 56, 0.86)
 
-				.fetured-items-card-btn-icon
+				.featured-items-card-btn-icon
 					fill: rgba(58, 56, 56, 0.86)
 			
 			&-icon

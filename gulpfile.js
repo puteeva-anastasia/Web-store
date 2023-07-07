@@ -46,7 +46,7 @@ gulp.task('js', function() {
 		'app/assets/libs/jquery/dist/jquery.min.js',
 		'app/assets/libs/owl.carousel/dist/owl.carousel.min.js',
 		'app/assets/libs/ion.rangeSlider/js/ion.rangeSlider.min.js',
-		'app/assets/js/common.js', // Всегда в конце
+		'app/assets/js/app.js', // Всегда в конце
 		])
 	.pipe(concat('app.min.js'))
 	.pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -113,7 +113,7 @@ gulp.task('code', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('app/assets/sass/**/*.sass', gulp.parallel('sass'));
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('js'));
+	gulp.watch(['app/assets/libs/**/*.js', 'app/assets/js/Basket.js', 'app/assets/js/app.js'], gulp.parallel('js'));
 	gulp.watch('app/*.html', gulp.parallel('code'));
 });
 

@@ -1,11 +1,4 @@
-$(function () {
-
-	let checkoutCard1 = document.querySelector('#checkout-card-1'),
-		checkoutCross1 = document.querySelector('#checkout-cross-1'),
-		checkoutCard2 = document.querySelector('#checkout-card-2'),
-		checkoutCross2 = document.querySelector('#checkout-cross-2'),
-		checkoutButtonClear = document.querySelector('#checkout-button-clear');
-
+(function(){
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
 		min: 0,
@@ -14,7 +7,7 @@ $(function () {
 		to: 2840,
 		prefix: "$"
 	});
-
+	
 	$('.product-carousel').owlCarousel({
 		dots: false,
 		loop: true,
@@ -28,7 +21,7 @@ $(function () {
 			}
 		}
 	});
-
+	
 	$('.product-choose-quantity #bt_minus').click(function () {
 		let $input = $(this).parent().find('.product-choose-quantity-input');
 		let count = parseInt($input.val()) - 1;
@@ -52,19 +45,5 @@ $(function () {
 			this.value = parseInt($(this).data('max-count'));
 		}
 	});
+})();
 
-	checkoutCross1.onclick = function () {
-		checkoutCard1.style.display = 'none';
-	};
-
-	checkoutCross2.onclick = function () {
-		checkoutCard2.style.display = 'none';
-	};
-
-	checkoutButtonClear.onclick = function () {
-		checkoutCard1.style.display = 'none';
-		checkoutCard2.style.display = 'none';
-	};
-
-
-});
